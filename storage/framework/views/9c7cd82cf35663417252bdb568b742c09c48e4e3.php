@@ -22,7 +22,7 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" first_name="first_name" value="<?php echo e(old('first_name')); ?>" required autocomplete="first_name" autofocus>
+unset($__errorArgs, $__bag); ?>" name="first_name" value="<?php echo e(old('first_name')); ?>" required autocomplete="first_name" autofocus>
 
                                 <?php $__errorArgs = ['first_name'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -38,6 +38,7 @@ endif;
 unset($__errorArgs, $__bag); ?>
                             </div>
                         </div>
+
 
                         <div class="row mb-3">
                             <label for="last_name" class="col-md-4 col-form-label text-md-end"><?php echo e(__('*Last Name')); ?></label>
